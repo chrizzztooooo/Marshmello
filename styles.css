@@ -1,0 +1,214 @@
+*{
+    box-sizing: border-box;
+    font-family: 'Open Sans Condensed', sans-serif;
+    margin: 0;
+    padding: 0%;
+}
+
+.wrap{
+    max-width: 1000px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    margin: 0 auto;
+}
+
+header{
+    color: white;
+    background-color: black;
+    padding: 20px 0;
+}
+
+ul{
+    display: flex;
+    justify-content: space-between;
+}
+
+li{
+    list-style-type: none;
+    margin-right: 20px;
+}
+
+a{
+    text-decoration: none;
+}
+
+.nav__anchor{
+    color: white;
+    font-size: 20px;
+    position: relative;
+    border-bottom: 1.5px solid transparent;
+}
+
+.nav__anchor::after{
+    background-color: white;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform .2s ease-in;
+}
+
+.nav__anchor:hover::after{
+    transform: scaleX(1);
+}
+
+.image__section{
+    background-color: lightpink;
+}
+
+.image__section__imgage_container{
+    overflow: hidden;
+    width: 33.33%;
+}
+
+.image-section__image{
+    display: flex;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    align-items: center;
+    justify-content: center;
+    height: 500px;
+    background-size: cover;
+    background-position: 50%;
+    background-repeat: no-repeat;
+    transition: trasnform .2s ease-in-out;
+}
+
+.image__section__text{
+    background-color: rgba(0,0,0,0.5);
+    color: white;
+    font-size: 30px;
+    text-align: center;
+    opacity: 0;
+    transform: scale(0.8);
+    transition: opacity .2s ease-in-out , transform .2s ease-in-out;
+}
+
+.image-section__image:hover{
+    transform: scale(1.1)
+}
+.image-section__image:hover .image__section__text{
+    transform: scale(1);
+    opacity: 1;
+    cursor: default;
+}
+
+
+.text-group__container{
+    padding: 50px;
+}
+
+.text-group__text{
+    margin-bottom: 25px;
+    font-size: 1.1rem;
+}
+
+button{
+    background: none;
+    border:1.5px solid black;
+    padding: 10px 20px;
+    font-size: 15px;
+    position: relative;
+}
+
+.button-double::after{
+    content: '';
+    background-color: lightpink;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    position: absolute;
+    z-index: -1;
+    transform-origin: 0 100%;
+    transform: scaleY(0);
+    transition: transform .2s ease-in-out;
+}
+
+.button-double:hover::after{
+    transform: scaleY(1);
+}
+
+.button-double a{
+    color: black;
+}
+
+.text-selection{
+    background-color: lightgoldenrodyellow;
+    padding: 50px 0;
+    z-index: -2;
+}
+
+.text-selection .wrap{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.text-selection__text{
+    margin-bottom: 30px;
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+footer{
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+footer a{
+    text-decoration: none;
+    color: white;
+}
+
+.main-button{
+    background: none;
+    z-index: 10;
+}
+.main-button::after{
+    content: '';
+    background-color: lightseagreen;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+    transform: scaleY(0);
+    transition: transform .2s ease-in-out;
+    z-index: -1;
+}
+
+.main-button:hover::after{
+    transform: scaleY(1);
+}
+
+
+.marshmello__image{
+    height: 100%;
+    width: 100%;
+    align-items: center;
+}
+
+.Marshmello__Text{
+    font-size: 1.1rem;
+    justify-content: center;
+    text-align: center;
+}
+
+.about__body{
+    background-color: lightskyblue;
+}
+
+
+.body__songs{
+    background-color: lightslategray;
+}
